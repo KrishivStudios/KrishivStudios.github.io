@@ -403,7 +403,7 @@ Frameworks & Platforms: Express.js, Vercel Serverless, Netlify Edge, Discord.js 
 Email: <a href="mailto:Krylobloxyt@gmail.com" class="text-cyan">Krylobloxyt@gmail.com</a><br>
 GitHub Organization: <a href="https://github.com/KrishivStudios" target="_blank" class="text-cyan">@KrishivStudios</a><br>
 Founder Profile: <a href="https://github.com/Krylo-60" target="_blank" class="text-cyan">@Krylo-60</a><br>
-Discord: <a href="https://discord.gg/2hSXQKHvvX" target="_blank" class="text-cyan">KryloSMP Discord Server</a>`;
+Discord: <a href="https://discord.gg/2hSXQKHvvX" target="_blank" class="text-cyan">Krishiv Studios Discord Server</a>`;
             break;
 
         case "clear":
