@@ -1,5 +1,5 @@
 // ==========================================================================
-// Krishiv Studios - Main Interactive Application Script v9.0
+// Krishiv Studios - Master Interactive Application Script v10.0
 // ==========================================================================
 
 // 1. Typewriter Animation Engine
@@ -46,16 +46,169 @@ function typeEffect() {
     setTimeout(typeEffect, currentSpeed);
 }
 
-// 2. DOM Initialization
+// 2. Interactive Background Canvas Particle Physics Engine
+function initCyberCanvas() {
+    const canvas = document.getElementById("cyberCanvas");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    const particles = [];
+    const particleCount = Math.min(width / 15, 60);
+
+    let mouse = { x: null, y: null, radius: 140 };
+
+    window.addEventListener("mousemove", (e) => {
+        mouse.x = e.x;
+        mouse.y = e.y;
+    });
+
+    window.addEventListener("mouseleave", () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 1.2;
+            this.vy = (Math.random() - 0.5) * 1.2;
+            this.radius = Math.random() * 2 + 1;
+            this.color = Math.random() > 0.5 ? "#00f2ff" : "#a855f7";
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = this.color;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+
+            // Mouse Interaction Physics
+            if (mouse.x && mouse.y) {
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < mouse.radius) {
+                    const force = (mouse.radius - dist) / mouse.radius;
+                    const angle = Math.atan2(dy, dx);
+                    this.x -= Math.cos(angle) * force * 3;
+                    this.y -= Math.sin(angle) * force * 3;
+                }
+            }
+        }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            // Connect nearby particles
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(0, 242, 255, ${1 - dist / 120 * 0.8})`;
+                    ctx.lineWidth = 0.6;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+// 3. Scroll-Triggered Animated Metrics Counter
+function initMetricCounters() {
+    const counterElements = document.querySelectorAll(".metric-number");
+    if (!counterElements.length) return;
+
+    let animated = false;
+
+    function startCounting() {
+        counterElements.forEach(el => {
+            const target = parseInt(el.getAttribute("data-target"), 10);
+            let count = 0;
+            const increment = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    el.textContent = target + "+";
+                    clearInterval(timer);
+                } else {
+                    el.textContent = count + "+";
+                }
+            }, 35);
+        });
+    }
+
+    window.addEventListener("scroll", () => {
+        const metricsSection = document.getElementById("metrics-section");
+        if (metricsSection && !animated) {
+            const rect = metricsSection.getBoundingClientRect();
+            if (rect.top <= window.innerHeight - 100) {
+                animated = true;
+                startCounting();
+            }
+        }
+    });
+}
+
+// 4. Floating AI Quick Button Handler
+function openCommissionModalFromFloating() {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    const input = document.getElementById("name");
+    if (input) input.focus();
+}
+
+// 5. DOM Initialization
 document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
+    initCyberCanvas();
+    initMetricCounters();
     initMobileNav();
     initScrollSpy();
     initProjectFilters();
     initTerminalInput();
 });
 
-// 3. Mobile Navigation Toggler
+// 6. Mobile Navigation Toggler
 function initMobileNav() {
     const toggleBtn = document.getElementById("mobileNavToggle");
     const sidebar = document.getElementById("header");
@@ -73,7 +226,7 @@ function initMobileNav() {
     }
 }
 
-// 4. ScrollSpy Active Link Tracking
+// 7. ScrollSpy Active Link Tracking
 function initScrollSpy() {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -96,7 +249,7 @@ function initScrollSpy() {
     });
 }
 
-// 5. Project Filtering Tabs
+// 8. Project Filtering Tabs
 function initProjectFilters() {
     const filterBtns = document.querySelectorAll(".filter-btn");
     const projectCards = document.querySelectorAll(".project-card");
@@ -120,7 +273,7 @@ function initProjectFilters() {
     });
 }
 
-// 6. Interactive Web Terminal CLI Engine
+// 9. Interactive Web Terminal CLI Engine
 const commandHistory = [];
 let historyIndex = -1;
 
@@ -278,7 +431,7 @@ function escapeHtml(text) {
         .replace(/'/g, "&#039;");
 }
 
-// 7. In-Page App Drawer Preview
+// 10. In-Page App Drawer Preview
 function openAppPreview(url, title, iconClass = 'bx-window-open') {
     const modal = document.getElementById("appPreviewModal");
     const iframe = document.getElementById("appModalIframe");
@@ -302,7 +455,7 @@ function closeAppPreview() {
     if (iframe) iframe.src = "about:blank";
 }
 
-// 8. Form Submission Handler & AI Agent Responder
+// 11. Form Submission Handler & AI Agent Responder
 async function submitCommissionForm(event) {
     event.preventDefault();
     const name = document.getElementById("name").value.trim();

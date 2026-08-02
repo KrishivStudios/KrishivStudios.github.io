@@ -32,12 +32,13 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Primary Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=9.0">
+    <link rel="stylesheet" href="style.css?v=10.0">
 </head>
 
 <body>
-    <!-- Background Ambient & Grid Effects -->
+    <!-- Background Ambient & Grid Effects with Physics Canvas -->
     <div class="bg-effects">
+        <canvas id="cyberCanvas"></canvas>
         <div class="cyber-grid"></div>
         <div class="glow-orb orb-cyan"></div>
         <div class="glow-orb orb-purple"></div>
@@ -47,6 +48,13 @@
     <!-- Mobile Navigation Toggle -->
     <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
         <i class="bx bx-menu"></i>
+    </button>
+
+    <!-- Floating Quick AI Sales Agent Widget -->
+    <button id="floatingAiBtn" onclick="openCommissionModalFromFloating()" title="Chat with Krishiv Studios AI Agent">
+        <i class="bx bx-bot"></i>
+        <span class="ai-btn-text">AI Sales Agent</span>
+        <span class="pulse-ring"></span>
     </button>
 
     <!-- Sidebar Navigation -->
@@ -65,12 +73,13 @@
         <nav id="navbar" class="nav-menu">
             <ul>
                 <li><a href="#hero" class="nav-link active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                <li><a href="#metrics-section" class="nav-link"><i class="bx bx-bar-chart"></i> <span>Live Metrics</span></a></li>
                 <li><a href="#ecosystem" class="nav-link"><i class="bx bx-cloud"></i> <span>Cloud & AI Ecosystem</span></a></li>
                 <li><a href="#terminal-section" class="nav-link"><i class="bx bx-terminal"></i> <span>Interactive CLI</span></a></li>
                 <li><a href="#about" class="nav-link"><i class="bx bx-user"></i> <span>About Krishiv PB</span></a></li>
                 <li><a href="#projects" class="nav-link"><i class="bx bx-folder"></i> <span>Projects & Tools</span></a></li>
                 <li><a href="#skills" class="nav-link"><i class="bx bx-code-alt"></i> <span>Tech Stack</span></a></li>
-                <li><a href="#stats" class="nav-link"><i class="bx bx-bar-chart-alt-2"></i> <span>GitHub Metrics</span></a></li>
+                <li><a href="#stats" class="nav-link"><i class="bx bx-bar-chart-alt-2"></i> <span>GitHub Stats</span></a></li>
                 <li><a href="#contact" class="nav-link"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
             </ul>
         </nav>
@@ -114,6 +123,32 @@
                     <a href="#terminal-section" class="btn btn-terminal"><i class="bx bx-terminal"></i> Interactive CLI</a>
                     <button onclick="openAppPreview('https://krylosmp-player-portal.vercel.app', 'KryloSMP Vercel Portal', 'bx-game')" class="btn btn-gold"><i class="bx bx-play-circle"></i> Launch In-Page Portal</button>
                     <button onclick="openResumeModal()" class="btn btn-outline"><i class="bx bx-file"></i> View PDF Resume</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Animated Metrics Counter Section -->
+        <section id="metrics-section" class="section">
+            <div class="metrics-grid">
+                <div class="metric-card glass-card">
+                    <div class="metric-icon text-cyan"><i class="bx bx-git-commit"></i></div>
+                    <div class="metric-number" data-target="840">0</div>
+                    <div class="metric-label">GitHub Commits (2026)</div>
+                </div>
+                <div class="metric-card glass-card">
+                    <div class="metric-icon text-gold"><i class="bx bx-code-block"></i></div>
+                    <div class="metric-number" data-target="15">0</div>
+                    <div class="metric-label">Production Web Apps</div>
+                </div>
+                <div class="metric-card glass-card">
+                    <div class="metric-icon text-purple"><i class="bx bx-cloud"></i></div>
+                    <div class="metric-number" data-target="4">0</div>
+                    <div class="metric-label">SaaS & Cloud Ecosystems</div>
+                </div>
+                <div class="metric-card glass-card">
+                    <div class="metric-icon text-cyan"><i class="bx bx-server"></i></div>
+                    <div class="metric-number-static">99.9%</div>
+                    <div class="metric-label">Cloud API Uptime</div>
                 </div>
             </div>
         </section>
@@ -244,7 +279,7 @@
 
                 <div class="terminal-body" id="terminalOutput">
                     <div class="terminal-line system-msg">
-                        <span class="text-cyan">Welcome to Krishiv Studios CLI v4.0 (Master Domain: Krishivstudios.github.io)</span>
+                        <span class="text-cyan">Welcome to Krishiv Studios CLI v5.0 (Master Domain: Krishivstudios.github.io)</span>
                     </div>
                     <div class="terminal-line">Type <span class="text-gold">'help'</span> to view available commands or click the shortcut chips below.</div>
                     <div class="terminal-line"><br></div>
@@ -656,7 +691,7 @@
     </div>
 
     <!-- Main JavaScript File -->
-    <script src="script.js?v=9.0"></script>
+    <script src="script.js?v=10.0"></script>
 </body>
 
 </html>
