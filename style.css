@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Krishivpb.github.io - Modern Cyber Developer Design System v6.0
+   Krishivpb.github.io - Modern Cyber Developer Design System v7.0
    ========================================================================== */
 
 :root {
@@ -194,6 +194,49 @@ body {
     border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
+/* Service Pills */
+.service-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.pill-vercel {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pill-netlify {
+    background: rgba(0, 199, 183, 0.12);
+    color: #00c7b7;
+    border: 1px solid rgba(0, 199, 183, 0.3);
+}
+
+.pill-discord {
+    background: rgba(88, 101, 242, 0.15);
+    color: #5865f2;
+    border: 1px solid rgba(88, 101, 242, 0.3);
+}
+
+.pill-ai {
+    background: rgba(16, 163, 127, 0.15);
+    color: #10a37f;
+    border: 1px solid rgba(16, 163, 127, 0.3);
+}
+
+.status-indicator {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.status-indicator.online {
+    color: var(--accent-green);
+}
+
 /* Buttons */
 .btn {
     display: inline-flex;
@@ -209,6 +252,11 @@ body {
     text-decoration: none;
     transition: var(--transition);
     border: none;
+}
+
+.btn-sm {
+    padding: 8px 14px;
+    font-size: 0.85rem;
 }
 
 .btn-primary {
@@ -514,6 +562,61 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
+}
+
+/* Ecosystem Grid */
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.ecosystem-card {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ecosystem-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.ecosystem-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.ecosystem-card p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    flex: 1;
+    margin-bottom: 18px;
+}
+
+.ecosystem-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.ecosystem-tags span {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ecosystem-actions {
+    display: flex;
+    gap: 10px;
 }
 
 /* Interactive Web Terminal CLI */
@@ -826,45 +929,14 @@ body {
     color: var(--accent-cyan);
     text-decoration: none;
     font-weight: 600;
+    background: transparent;
+    border: none;
+    cursor: pointer;
     transition: var(--transition);
 }
 
 .btn-project-link:hover {
     color: var(--accent-gold);
-}
-
-/* SaaS Ecosystem Banner */
-.saas-banner {
-    padding: 40px;
-    border-left: 4px solid var(--accent-gold);
-}
-
-.saas-info h3 {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    margin: 12px 0;
-}
-
-.saas-info p {
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    max-width: 800px;
-    margin-bottom: 20px;
-}
-
-.saas-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 24px;
-}
-
-.saas-features span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
-    color: var(--accent-green);
 }
 
 /* Skills Wrapper */
@@ -903,7 +975,6 @@ body {
 .skill-name {
     font-size: 0.9rem;
     color: var(--text-primary);
-
 }
 
 .skill-bar {
@@ -1100,6 +1171,21 @@ body {
     max-height: 300px;
     overflow-y: auto;
     margin-bottom: 20px;
+}
+
+.app-modal-card {
+    max-width: 1050px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: #090d18;
 }
 
 .resume-modal-card {

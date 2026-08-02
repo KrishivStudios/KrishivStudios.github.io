@@ -1,50 +1,27 @@
-# Krishivpb.github.io
+# Krishivpb.github.io - Master Ecosystem Hub
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00f2ff?style=flat-square&logo=github)](https://krishivpb.github.io)
-[![Profile Views](https://komarev.com/ghpvc/?username=krylo-60&label=GitHub%20Views&color=00f2ff&style=flat-square)](https://github.com/Krylo-60)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Master%20Domain-00f2ff?style=flat-square&logo=github)](https://krishivpb.github.io)
+[![Profile Views](https://komarev.com/ghpvc/?username=krylo-60&label=Profile%20Views&color=00f2ff&style=flat-square)](https://github.com/Krylo-60)
 [![Commits](https://img.shields.io/badge/Commits-840%2B-ffb700?style=flat-square&logo=git)](https://github.com/Krylo-60)
 
-Official personal developer website for **Krishiv PB (`@Krylo-60`)**, 12-Year-Old Full-Stack Software Engineer, Founder of **Krishiv Studios**, and Creator of **Krims Code AI** & **SMPLink SaaS**, hosted **100% natively on GitHub Pages**.
+Official personal master domain for **Krishiv PB (`@Krylo-60`)**, 12-Year-Old Full-Stack Software Engineer, Founder of **Krishiv Studios**, and Creator of **Krims Code AI** & **SMPLink SaaS**.
 
-## 🌟 Features
+This repository hosts the canonical master hub at **[https://krishivpb.github.io](https://krishivpb.github.io)**, embedding and unifying all Vercel cloud microservices, Netlify edge tools, Discord AI bots, and KryloSMP server portals under a single published website.
 
-- ⚡ **Dark Cyber & Glassmorphism Design**: Custom design system built with CSS variables, glowing gradient light orbs, and dark theme UI elements.
-- 💻 **Interactive Web Terminal CLI**: Type commands (`help`, `bio`, `projects`, `skills`, `github`, `contact`, `clear`) directly on the web page.
-- 🚀 **Categorized Open-Source Projects**: Instant tab filtering across AI tools, Discord bots, Minecraft SMP plugins, and web developer utilities.
-- 📊 **GitHub Activity Integration**: Live badges, language charts, and contribution snake grid.
-- 🤖 **AI Commission Sales Agent**: Interactive inquiry form connected to direct FormSubmit email dispatch and native client AI Sales Agent preview.
-- 📄 **Digital Resume Modal**: Printable, responsive digital PDF resume drawer.
-- 🌐 **GitHub Pages Native**: Configured with `.nojekyll` for direct static serving on GitHub Pages.
+## 🌟 Ecosystem Highlights
 
-## 🚀 Live Demo
+- 🌐 **Canonical Published Hub (`https://krishivpb.github.io`)**: Central domain for all software products, platforms, and services.
+- 📱 **In-Page App Drawer (`#appPreviewModal`)**: Test live Vercel apps (SMPLink SaaS, KryloSMP Player Portal) and AI agents directly inside the site.
+- ⚡ **Dark Cyber & Glassmorphism UI**: Built with custom CSS tokens, ambient gradient light orbs, and dark theme components.
+- 💻 **Interactive Web Terminal CLI**: Execute commands (`help`, `ecosystem`, `vercel`, `netlify`, `bots`, `ai`, `bio`, `projects`, `skills`, `contact`, `clear`) directly in the browser.
+- 🤖 **AI Commission Sales Agent**: Contact form connected to FormSubmit email dispatcher with Vercel AI Auto-Responder API fallback.
+- 📄 **Digital Resume Drawer**: Printable, responsive digital PDF resume viewer.
+- 🌐 **GitHub Pages Native**: Configured with `.nojekyll` for optimal static asset delivery.
 
-Access the live site at: **[https://krishivpb.github.io](https://krishivpb.github.io)**
+## 🚀 Live Master Hub
 
-## 📁 Repository Structure
-
-```
-Krishivpb.github.io/
-├── index.html               # Main Single-Page Application (SPA)
-├── style.css                # Custom CSS Design System & Glassmorphic Styling
-├── script.js                # Typewriter, Terminal Engine, ScrollSpy & Form Logic
-├── resume.html              # Digital Print-Friendly PDF Resume Page
-├── krishiv_studios_logo.jpg # Avatar & Logo Asset
-├── .nojekyll                # GitHub Pages Build Filter Bypass
-└── README.md                # Project Documentation
-```
-
-## 🛠️ Local Development
-
-To run locally:
-1. Clone or open the folder:
-   ```bash
-   cd Krishivpb.github.io
-   ```
-2. Open `index.html` in any browser or launch a local dev server:
-   ```bash
-   npx serve .
-   ```
+Access the published domain at: **[https://krishivpb.github.io](https://krishivpb.github.io)**
 
 ---
 
-&copy; 2026 **Krishiv PB (Krylo-60)** • Founder of Krishiv Studios • Hosted on GitHub Pages
+&copy; 2026 **Krishiv PB (Krylo-60)** • Founder of Krishiv Studios
