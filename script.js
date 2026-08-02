@@ -1,12 +1,12 @@
 // ==========================================================================
-// Krishivpb.github.io - Main Interactive Application Script v7.0
+// Krishiv Studios - Main Interactive Application Script v9.0
 // ==========================================================================
 
 // 1. Typewriter Animation Engine
 const typedItems = [
+    "Krishiv Studios Ecosystem",
     "Full Stack Software Engineer",
     "12-Year-Old Prodigy (Grade 7)",
-    "Founder of Krishiv Studios",
     "Creator of Krims Code AI",
     "Minecraft SMP Architect",
     "Monetized SaaS Developer"
@@ -163,7 +163,7 @@ function runTerminalCommand(commandStr) {
     // Print Prompt Line
     const promptLine = document.createElement("div");
     promptLine.className = "terminal-line";
-    promptLine.innerHTML = `<span class="terminal-prompt">krishiv@github.io:~$</span> <span class="text-gold">${escapeHtml(commandStr)}</span>`;
+    promptLine.innerHTML = `<span class="terminal-prompt">krishiv@studios:~$</span> <span class="text-gold">${escapeHtml(commandStr)}</span>`;
     output.appendChild(promptLine);
 
     // Response Container
@@ -173,7 +173,7 @@ function runTerminalCommand(commandStr) {
     switch (cmdLower) {
         case "help":
             responseLine.innerHTML = `
-<span class="text-cyan">Available CLI Commands (Master Hub: Krishivpb.github.io):</span><br>
+<span class="text-cyan">Available CLI Commands (Master Hub: Krishivstudios.github.io):</span><br>
   <span class="text-gold">ecosystem</span> - View unified Vercel, Netlify, AI & Discord hub summary<br>
   <span class="text-gold">vercel</span>    - List live Vercel cloud apps & serverless APIs<br>
   <span class="text-gold">netlify</span>   - Inspect Netlify deployments & web toolkits<br>
@@ -189,7 +189,8 @@ function runTerminalCommand(commandStr) {
         case "ecosystem":
             responseLine.innerHTML = `
 <span class="text-cyan">=== UNIFIED CLOUD & AI ECOSYSTEM ===</span><br>
-Master Canonical Domain: <span class="text-gold">https://krishivpb.github.io</span><br>
+Master Canonical Domain: <span class="text-gold">https://krishivstudios.github.io</span><br>
+Organization: Krishiv Studios<br>
 Connected Platforms: Vercel Cloud, Netlify Edge, Discord Bot Gateway, OpenAI Agent Suite.`;
             break;
 
@@ -203,7 +204,7 @@ Connected Platforms: Vercel Cloud, Netlify Edge, Discord Bot Gateway, OpenAI Age
         case "netlify":
             responseLine.innerHTML = `
 <span class="text-cyan">=== NETLIFY APPLICATIONS ===</span><br>
-Krishiv Studios Web Tools & Static Edge Endpoints hosted & linked to <span class="text-gold">krishivpb.github.io</span>.`;
+Krishiv Studios Web Tools & Static Edge Endpoints hosted & linked to <span class="text-gold">krishivstudios.github.io</span>.`;
             break;
 
         case "bots":
@@ -224,7 +225,7 @@ Agent Workspace & Prompt Evaluator - Automated refactoring, subagent execution, 
 Age: 12 (Grade 7 Student & Software Engineer from India)<br>
 Title: Founder of Krishiv Studios & KryloSMP Network<br>
 GitHub Commits: 840+ in 2026<br>
-Master Hub: krishivpb.github.io`;
+Master Hub: krishivstudios.github.io`;
             break;
 
         case "projects":
@@ -247,7 +248,8 @@ Frameworks & Platforms: Express.js, Vercel Serverless, Netlify Edge, Discord.js 
         case "contact":
             responseLine.innerHTML = `
 Email: <a href="mailto:71krishivpb@gmail.com" class="text-cyan">71krishivpb@gmail.com</a><br>
-GitHub: <a href="https://github.com/Krylo-60" target="_blank" class="text-cyan">@Krylo-60</a><br>
+GitHub Organization: <a href="https://github.com/KrishivStudios" target="_blank" class="text-cyan">@KrishivStudios</a><br>
+Founder Profile: <a href="https://github.com/Krylo-60" target="_blank" class="text-cyan">@Krylo-60</a><br>
 Discord: <a href="https://discord.gg/2hSXQKHvvX" target="_blank" class="text-cyan">KryloSMP Discord Server</a>`;
             break;
 
@@ -325,7 +327,7 @@ async function submitCommissionForm(event) {
             body: JSON.stringify({
                 name: `Commission Inquiry from ${name}`,
                 email: email,
-                message: `🚀 NEW COMMISSION INQUIRY (Krishivpb.github.io Master Hub)\n\nClient Name: ${name}\nClient Email: ${email}\nEstimated Budget: ${budget}\nTracker ID: ${orderId}\n\nProject Requirements:\n${message}`,
+                message: `🚀 NEW COMMISSION INQUIRY (Krishiv Studios Master Hub)\n\nClient Name: ${name}\nClient Email: ${email}\nEstimated Budget: ${budget}\nTracker ID: ${orderId}\n\nProject Requirements:\n${message}`,
                 _subject: `🤖 New Order: ${name} (${orderId})`
             })
         }).catch(err => console.error("FormSubmit dispatch notification:", err));
@@ -346,12 +348,12 @@ async function submitCommissionForm(event) {
 
         if (res.ok) {
             const data = await res.json();
-            messageBox.textContent = data.aiMessage || data.aiResponse || data.message || `🤖 [KRISHIV PB AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
+            messageBox.textContent = data.aiMessage || data.aiResponse || data.message || `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
         } else {
-            messageBox.textContent = `🤖 [KRISHIV PB AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
+            messageBox.textContent = `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
         }
     } catch (err) {
-        messageBox.textContent = `🤖 [KRISHIV PB AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
+        messageBox.textContent = `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
     }
 
     modal.classList.remove("hidden");
