@@ -400,7 +400,7 @@ Frameworks & Platforms: Express.js, Vercel Serverless, Netlify Edge, Discord.js 
 
         case "contact":
             responseLine.innerHTML = `
-Email: <a href="mailto:71krishivpb@gmail.com" class="text-cyan">71krishivpb@gmail.com</a><br>
+Email: <a href="mailto:Krylobloxyt@gmail.com" class="text-cyan">Krylobloxyt@gmail.com</a><br>
 GitHub Organization: <a href="https://github.com/KrishivStudios" target="_blank" class="text-cyan">@KrishivStudios</a><br>
 Founder Profile: <a href="https://github.com/Krylo-60" target="_blank" class="text-cyan">@Krylo-60</a><br>
 Discord: <a href="https://discord.gg/2hSXQKHvvX" target="_blank" class="text-cyan">KryloSMP Discord Server</a>`;
@@ -471,7 +471,7 @@ async function submitCommissionForm(event) {
 
     // Direct FormSubmit email dispatch
     try {
-        fetch("https://formsubmit.co/ajax/71krishivpb@gmail.com", {
+        fetch("https://formsubmit.co/ajax/Krylobloxyt@gmail.com", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",
@@ -501,12 +501,12 @@ async function submitCommissionForm(event) {
 
         if (res.ok) {
             const data = await res.json();
-            messageBox.textContent = data.aiMessage || data.aiResponse || data.message || `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
+            messageBox.textContent = data.aiMessage || data.aiResponse || data.message || `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to Krylobloxyt@gmail.com.`;
         } else {
-            messageBox.textContent = `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
+            messageBox.textContent = `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to Krylobloxyt@gmail.com.`;
         }
     } catch (err) {
-        messageBox.textContent = `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to 71krishivpb@gmail.com.`;
+        messageBox.textContent = `🤖 [KRISHIV STUDIOS AI SALES AGENT]\n-----------------------------------\nHello ${name} (${email})!\nYour commission inquiry for "${message}" has been received and queued!\nTracker ID: ${orderId}\nBudget Selected: ${budget}\nAn email notification has been dispatched to Krylobloxyt@gmail.com.`;
     }
 
     modal.classList.remove("hidden");
